@@ -5,9 +5,10 @@ class Intern extends Employee{
         super(name, id, email)
         this.school = school
        
-        this.getRole = () => { return "Intern"}
-        this.getSchool = () => {return this.school}
+       
         }
+        getRole = () => { return "Intern"}
+        getSchool = () => {return this.school}
 }
 
-module.exports =  Intern
+module.exports =  Intern;
