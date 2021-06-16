@@ -1,9 +1,18 @@
 # Team-Profile-Generator-OOP
 
-<h1> Welcome! to the Object-Oriented-Programmed, TEAM PROFILE GENERATOR!!! </h1>
+<h1> Welcome! To the Object-Oriented-Programmed, TEAM PROFILE GENERATOR!!! </h1>
 
+## What's inside:
+*[Criteria](#criteria)
+    
+*[Link to Video](#link-to-video)
 
+*[Link to Repo](#link-to-github)
+    
+*[Sneak Peek](#sneak-peek)
+    
 
+## Criteria
 <h3> Here are the project criteria, should you choose to accept them </h3>
 
 
@@ -35,3 +44,14 @@ THEN I exit the application, and the HTML is generated</li>
 
 
 <p> this message will self-destruct in 30 seconds</p>
+
+## Link to video:
+https://drive.google.com/file/d/1DavGP96CQuc66TPbgDcOgUs3ylV673M_/view
+
+## Link to GitHub:
+https://github.com/Staycold/Team-Profile-Generator-OOP
+
+## Sneak peek. 
+
+<img src="assets/sneakPeek.png"/>
+

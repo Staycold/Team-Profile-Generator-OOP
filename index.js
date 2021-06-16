@@ -106,24 +106,7 @@ function addMore(){
           })
           
 
-         
-
-
-
-      // const html=generateHtml(teamMembers)
-      //            console.log(html)
-      
-      // fs.writeFile('team.html',html, err=>{
-      //   err?console.log(err):console.log('success')
-      //     })
-
-
-
-
-
-
-
-        break;
+             break;
 
       default:
         break;
