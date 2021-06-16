@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require("fs");
+const generateHtml =require('./generateHtml')
+
 
 // These are the team members
 const Intern = require("./Employees/Intern.js")
@@ -15,9 +17,8 @@ const addaWorker = () => {
 
 
   return inquirer.prompt ([
- 
     
-     {
+      {
          type: 'list',
          message: 'please hire an employee',
          name:'role',
@@ -26,20 +27,20 @@ const addaWorker = () => {
        },
        {
          type: 'input',
-       message: `What is the employee's name ?`,
-       name: 'name',
-     },
-     {
-       type: 'input',
-     message: 'Please enter and ID for the Employee',
-     name: 'id',
-   },
-   {
-     type: 'input',
-   message: 'What is the email of the employee?',
-   name: 'email',
- },
- {
+         message: `What is the employee's name ?`,
+         name: 'name',
+       },
+       {
+         type: 'input',
+         message: 'Please enter and ID for the Employee',
+         name: 'id',
+       },
+       {
+         type: 'input',
+         message: 'What is the email of the employee?',
+         name: 'email',
+       },
+       {
          type: 'input',
          message: 'What is their Github name? ',
          name:'gitHub',
@@ -52,8 +53,9 @@ const addaWorker = () => {
          name:'school',
          when: (input) => input.role == "Intern"
        
-       },
+       }
  ])
+
      .then(employeeAnswers => {
        console.log(employeeAnswers)
        let { name, id, email, role, gitHub, school} = employeeAnswers; 
@@ -66,7 +68,7 @@ const addaWorker = () => {
    } else if (role === "Intern") {
        let employee = new Intern(name, id, email, school);
  
-       console.log(employee);
+      //  console.log(employee);
        teamMembers.push(employee); 
    }
  
@@ -93,15 +95,34 @@ function addMore(){
 
       case "NO":
         console.log('teammembers',teamMembers)
-        //pass the array into the function that put the values in the html
-        //the return from that will be pass to the fs.writeFile to write the file
-        let html=`
+
         
-        <html>
-        
-        
-        `
-        console.log(html)
+        const html= generateHtml(teamMembers)
+       
+
+
+          fs.writeFile(`team.html`,html,err=>{
+        err?console.log(err):console.log('success')
+          })
+          
+
+         
+
+
+
+      // const html=generateHtml(teamMembers)
+      //            console.log(html)
+      
+      // fs.writeFile('team.html',html, err=>{
+      //   err?console.log(err):console.log('success')
+      //     })
+
+
+
+
+
+
+
         break;
 
       default:
@@ -148,8 +169,6 @@ const addaManager = () => {
 }
 
 // Adding the working class to the team. power to the people.
-
-
 function init() {
   
   addaManager()
