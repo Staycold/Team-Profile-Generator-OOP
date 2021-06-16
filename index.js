@@ -101,7 +101,7 @@ function addMore(){
        
 
 
-          fs.writeFile(`team.html`,html,err=>{
+          fs.writeFile(`index.html`,html,err=>{
         err?console.log(err):console.log('success')
           })
           
