@@ -52,6 +52,6 @@ https://drive.google.com/file/d/1DavGP96CQuc66TPbgDcOgUs3ylV673M_/view
 https://github.com/Staycold/Team-Profile-Generator-OOP
 
 ## Sneak peek. 
-
+https://staycold.github.io/Team-Profile-Generator-OOP/
 <img src="assets/sneakPeek.png"/>
 
